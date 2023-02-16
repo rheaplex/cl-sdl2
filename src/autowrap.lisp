@@ -16,9 +16,7 @@
                    "machine/_types.h"
                    "SDL2")
  :sysincludes `,(cl:append
-                 #+openbsd (cl:list "/usr/X11R6/include")
-                 #+(and unix (not darwin))
-                 (cl:list "/usr/lib/clang/13.0.1/include/"))
+                 #+openbsd (cl:list "/usr/X11R6/include"))
  :exclude-definitions ("SDL_main"
                        "SDL_LogMessageV"
                        "SDL_vsnprintf"
